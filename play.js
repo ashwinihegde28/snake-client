@@ -12,14 +12,16 @@ const connection = connect();
     conn.write("Name: ABC");
   });
   return conn;
-};*/
+};
 
 // setup interface to handle user input from stdin
 
 connection.on("data", (data) => {
   console.log(data);
-});
+});*/
 
 console.log("Connecting ...");
 connect();
-setupInput();
+setupInput(connection);
+
+module.exports = { connect };
